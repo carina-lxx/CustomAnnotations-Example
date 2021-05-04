@@ -1,13 +1,14 @@
 package com.galvanize.annotations;
 
+import com.galvanize.model.Person;
+import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.galvanize.model.Person;
-import org.junit.Test;
 
 
-public class JsonSerializerUnitTest {
+class ObjectToJsonConverterTest {
 
     @Test
     public void givenObjectNotSerializedThenExceptionThrown() throws JsonSerializationException {
@@ -27,4 +28,3 @@ public class JsonSerializerUnitTest {
         assertEquals("{\"personAge\":\"34\",\"firstName\":\"Soufiane\",\"lastName\":\"Cheouati\"}", jsonString);
     }
 }
-
